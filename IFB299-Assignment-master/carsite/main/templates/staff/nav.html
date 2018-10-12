@@ -1,0 +1,15 @@
+<div class="topnav">
+    <a class="active" href="{% url 'index' %}">Index</a>
+    {% if user.is_authenticated %} <!--Needs to change to role based-->
+    <a href="{% url 'rental-history' %}">New Rental History</a>
+    <a href="{% url 'create-customer'%}">New Customer</a>
+    <a href="#analysis">Analysis</a>
+    {% endif %}
+    <a href="#carRecmd">Car Recommendation</a>
+    <a href="#carSearch">Car Search</a>
+    {% if user.is_authenticated %}
+    <a class="logout" href="{% url 'logout' %}">Logout</a> <!--leave main/staff-->
+    {% else %}
+    <a class="login" href="{% url 'login' %}">Login</a>
+    {% endif %}
+</div>

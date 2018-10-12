@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+</head>
+<body>
+    <div id='header'>
+        CFC
+    </div>
+    {% include "../staff/nav.html" %}
+    <div id='container'>
+        You have successfully logged out
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\accounts",
+    "\\accounts\\templates",
+    "\\accounts\\templates\\registration",
+    "\\carsite",
+    "\\main",
+    "\\main\\staff",
+    "\\main\\staff\\create-customer",
+    "\\main\\staff\\create-customer\\templates",
+    "\\main\\staff\\create-customer\\templates\\staff",
+    "\\main\\templates",
+    "\\main\\templates\\staff"
+  ],
+  "PreviewInSolutionExplorer": false
+}

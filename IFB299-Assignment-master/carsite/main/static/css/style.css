@@ -1,0 +1,31 @@
+html {
+	font-family: sans-serif;
+}
+#header {
+	background-color:#555599;
+	color:white;
+	margin: 0 auto;
+	text-align: center;
+	font-size:96px;
+}
+#containerForm {
+    background-color: #eee;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#container {
+    background-color: #eee;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+    font-size:large;
+    padding: 10px;
+}
+
+h2 {
+    text-align:center;
+}
+
+
