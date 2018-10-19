@@ -1,0 +1,26 @@
+{% extends 'staff/base.html' %}
+{% block content %}
+<div id='containerForm'>
+    <center>
+        <h2>Car Search</h2>
+        Pick a category
+        {% if car_field_list %}
+        <table>
+            <tr>
+                <th>Categories</th>
+            </tr>
+
+            {% for store in car_field_list %}
+            <tr>
+                <td><a href="{{ store }}/">{{ store }}</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p>No categories are available.</p>
+        {% endif %}
+
+    </center>
+</div>
+
+{% endblock %}

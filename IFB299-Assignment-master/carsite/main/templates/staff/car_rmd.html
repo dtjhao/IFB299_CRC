@@ -1,0 +1,26 @@
+{% extends 'staff/base.html' %}
+{% block content %}
+<div id='containerForm'>
+    <center>
+        <h2>Car Recommendation</h2>
+        Pick a city
+        {% if city_list %}
+        <table>
+            <tr>
+                <th>Cities</th>
+            </tr>
+
+            {% for city in city_list %}
+            <tr>
+                <td><a href="{{ city.city_id }}/">{{ city.name }}</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p>No cities are available.</p>
+        {% endif %}
+
+    </center>
+</div>
+
+{% endblock %}

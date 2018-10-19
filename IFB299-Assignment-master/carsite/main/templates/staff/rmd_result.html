@@ -1,0 +1,37 @@
+{% extends 'staff/base.html' %}
+{% block content %}
+<div id='containerForm'>
+    <h2>Car Recommendation</h2>
+
+    <div>
+        month:<select id="month">
+            <option value="">All months</option>
+            {% for month in month_list %}
+            <option value="{{ month }}">{{ month }}</option>
+            {% endfor %}
+        </select>
+        <button type="button" onclick="location.href=(month.value)">Filter</button>
+        <button type="button" onclick="location.href=''">Clear</button>
+    </div>
+    </br>
+    MONTH : {{month}} | CITY :<b>{{city}}</b>
+    </br></br>
+    {% if body_type_list %}
+    <table>
+        <tr>
+            <th>BODY TYPE</th>
+            <th>REMARKS</th>
+        </tr>
+        {% for x in body_type_list %}
+        <tr>
+            <td>{{x.0}}</td>
+            <td>MOST POPULAR BODY TYPE IN THE CITY</td>
+            {% endfor %}
+        </tr>
+    </table>
+    {% else %}
+    No recommended cars for this month
+    {% endif %}
+</div>
+{% endblock %}
+

@@ -6,10 +6,11 @@ class CustomerForm(forms.ModelForm):
 
     class Meta:
 	    model = Customer
-	    fields = ['first_name', 'last_name', 'gender', 'birthday', 'address', 'phone_number', 'occupation']
+	    fields = ['name', 'gender', 'birthday', 'address', 'phone_number', 'occupation']
 
 class RentalForm(forms.ModelForm):
     
     class Meta:
         model = Rental
-        fields = ['customer_id','start_date','due_date','returned_date','vehicle_id','damaged_info','lost']
+        fields = ['order_id','vehicle_id','customer_id','start_date','returned_date']
+		#remove customer_id, add customer name and phone number

@@ -4,8 +4,6 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/nav.css' %}">
 </head>
-{% block authentication %}
-{% endblock %}
 <body>
     <div id='header'>
         CRC
@@ -14,7 +12,5 @@
         {% block content %}
         {% endblock %}
 </body>
-{% block notloggedin %}
-{% endblock %}
 
 </html>

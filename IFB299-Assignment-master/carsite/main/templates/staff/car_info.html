@@ -1,0 +1,48 @@
+{% extends 'staff/base.html' %}
+{% block content %}
+<div id='containerForm'>
+    <h2>Car Search</h2>
+
+    Field : {{car_field}} | Specification :<b>{{car_spec}}</b>
+    <br><br>
+    {% if car_spec_list %}
+    <table>
+        <tr>
+            <th>MAKER</th>
+            <th>MODEL</th>
+            <th>SERIES</th>
+            <th>YEAR</th>
+            <th>ENGINE SIZE</th>
+            <th>FUEL SYSTEM</th>
+            <th>TANK CAPACITY</th>
+            <th>POWER</th>
+            <th>SEATING</th>
+            <th>STD TRANSMISSION</th>
+            <th>BODY TYPE</th>
+            <th>DRIVE</th>
+            <th>WHEELBASE</th>
+        </tr>
+        {% for x in car_spec_list %}
+        <tr>
+            <td>{{x.maker_id}}</td>
+            <td>{{x.model}}</td>
+            <td>{{x.series}}</td>
+            <td>{{x.year}}</td>
+            <td>{{x.engine_size}}</td>
+            <td>{{x.fuel_system}}</td>
+            <td>{{x.tank_capacity}}</td>
+            <td>{{x.power}}</td>
+            <td>{{x.seating}}</td>
+            <td>{{x.standard_transmission}}</td>
+            <td>{{x.body_type}}</td>
+            <td>{{x.car_drive}}</td>
+            <td>{{x.car_wheelbase}}</td>
+            {% endfor %}
+        </tr>
+    </table>
+    {% else %}
+    No recommended cars for this month
+    {% endif %}
+</div>
+{% endblock %}
+

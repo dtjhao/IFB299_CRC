@@ -1,0 +1,45 @@
+{% extends 'staff/base.html' %}
+{% block content %}
+{% if user.is_staff %}
+<div id='containerForm'>
+    <center><h2>Analysis</h2></center>
+    Store Name:<b>{{ store.name }}</b>  |
+    Store ID:{{ store.store_id }}  |
+    Address:{{store.address}}  |
+    Phone:{{store.phone}}  |
+    City:{{store.city_id.name}}
+    <br>
+    <br>
+    <div>
+        month:<select id="month">
+            <option value="">All months</option>
+            {% for month in month_list %}
+            <option value="{{ month }}">{{ month }}</option>
+            {% endfor %}
+        </select>
+        <button type="button" onclick="location.href=(month.value)">Filter</button>
+        <button type="button" onclick="location.href=''">Clear</button>
+    </div>
+    <h3>MONTH : {{month}}</h3>
+    {% if body_type_list %}
+    <table>
+        <tr>
+            <th>BODY TYPE</th>
+            <th>QUANTITY OF PICK UPS</th>
+        </tr>
+        {% for x in body_type_list %}
+        <tr>
+            <td>{{x.0}}</td>
+            <td>{{x.1}}</td>
+            {% endfor %}
+        </tr>
+    </table>
+    {% else %}
+    No recommended cars for this month
+    {% endif %}
+</div>
+{% else %}
+<h2>You cannot access this page</h2>
+{% endif %}
+{% endblock %}
+

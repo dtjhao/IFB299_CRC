@@ -1,0 +1,30 @@
+{% extends 'staff/base.html' %}
+{% block content %}
+{% if user.is_staff %}
+<div id='containerForm'>
+    <center>
+        <h2>STORE ANALYSIS</h2>
+        Pick a store
+        {% if store_list %}
+        <table>
+            <tr>
+                <th>Stores</th>
+            </tr>
+
+            {% for store in store_list %}
+            <tr>
+                <td><a href="{{ store.store_id }}/">{{ store.name }}</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p>No stores are available.</p>
+        {% endif %}
+
+    </center>
+</div>
+{% else %}
+<h2> You cannot access this page </h2>
+{% endif %}
+
+{% endblock %}
